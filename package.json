@@ -7,10 +7,10 @@
     "node": ">=24"
   },
   "scripts": {
-    "dev": "cross-env NAPI_RS_ENFORCE_VERSION_CHECK=1 vite dev --host 0.0.0.0",
-    "build": "cross-env NAPI_RS_ENFORCE_VERSION_CHECK=1 vite build",
+    "dev": "cross-env NAPI_RS_ENFORCE_VERSION_CHECK=1 vite dev --configLoader runner --host 0.0.0.0",
+    "build": "cross-env NAPI_RS_ENFORCE_VERSION_CHECK=1 vite build --configLoader runner",
     "start": "node .output/server/index.mjs",
-    "preview": "cross-env NAPI_RS_ENFORCE_VERSION_CHECK=1 vite preview --host 0.0.0.0",
+    "preview": "cross-env NAPI_RS_ENFORCE_VERSION_CHECK=1 vite preview --configLoader runner --host 0.0.0.0",
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm run build",
     "test:smoke": "npm run check && node scripts/smoke.mjs"
