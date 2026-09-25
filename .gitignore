@@ -1,0 +1,8 @@
+node_modules
+.output
+dist
+.nitro
+.vite
+.DS_Store
+*.local
+npm-debug.log*
